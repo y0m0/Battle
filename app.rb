@@ -24,6 +24,4 @@ enable :sessions
     @player_2_name = session[:player_2_name]
     erb :attack
   end
-
-  run! if app_file == $0
 end
