@@ -17,15 +17,6 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'let player attack another player' do
-      player2 = spy(Player.new('Michael'))
-      player1.attack(player2)
-      expect(player2).to have_received(:reduce_hp_when_attacked)
-
-    end
-  end
-
   describe '#reduce_hp_when_attacked' do
     it 'reduce player hp when attacked' do
       expect { player2.reduce_hp_when_attacked }.to change{ player2.hp }.by(-10)
