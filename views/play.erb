@@ -1,9 +1,9 @@
 <%= $game.player_1.name %> vs. <%= $game.player_2.name %>
 </br>
-<%= $game.player_1.name %>: <%= $game.player_1.hp %>HP
-</br>
+<%= $game.player_1.name %>: <%= $game.player_1.hp %>HP |
 <%= $game.player_2.name %>: <%= $game.player_2.hp %>HP
 </br>
+Now is <%= $game.attacker.name %>'s turn!
 <form action="/attack">
   <input type="submit" value="Attack"/>
 </form>

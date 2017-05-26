@@ -21,5 +21,10 @@ describe Player do
     it 'reduce player hp when attacked' do
       expect { player2.reduce_hp_when_attacked }.to change{ player2.hp }.by(-10)
     end
+
+    # it 'shows the player has lost if 0HP' do
+    #   9.times { player2.reduce_hp_when_attacked }
+    #   expect(player_2.reduce_hp_when_attacked).to eq ''
+    # end
   end
 end

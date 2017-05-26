@@ -22,4 +22,8 @@ attr_reader :player_1, :player_2
   def defender
     @turns.last
   end
+
+  def loser
+    @turns.find { |player| player.hp == 0 }
+  end
 end

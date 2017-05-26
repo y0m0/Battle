@@ -18,6 +18,7 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
+    redirect '/gameover' unless $game.loser.nil?
     erb :play
   end
 
@@ -29,5 +30,9 @@ class Battle < Sinatra::Base
   post '/switch' do
     $game.switch
     redirect '/play'
+  end
+
+  get '/gameover' do
+    erb :gameover
   end
 end

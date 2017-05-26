@@ -23,4 +23,13 @@ describe Game do
       expect(game.attacker).to eq player_2
     end
   end
+
+  describe '#loser' do
+    it 'checks if a player has 0HP' do
+      allow(player_1).to receive(:hp) { 10 }
+      allow(player_2).to receive(:hp) { 0 }
+      game = Game.new(player_1, player_2)
+      expect(game.loser).to eq player_2
+    end
+  end
 end
