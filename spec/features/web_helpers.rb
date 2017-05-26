@@ -7,5 +7,5 @@ end
 
 def player_1_attacks_player_2
   click_button 'Attack'
-  click_link 'OK'
+  click_button 'OK'
 end

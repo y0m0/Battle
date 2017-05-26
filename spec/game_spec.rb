@@ -20,7 +20,7 @@ describe Game do
   describe '#switch_roles' do
     it 'changes the players attacker and defender roles' do
       game.switch
-      expect(game.attacker).to eq player_1
+      expect(game.attacker).to eq player_2
     end
   end
 end

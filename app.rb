@@ -18,12 +18,16 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    $game.switch
     erb :play
   end
 
   get '/attack' do
     $game.attack($game.defender)
     erb :attack
+  end
+
+  post '/switch' do
+    $game.switch
+    redirect '/play'
   end
 end
